@@ -16,6 +16,17 @@
     "noUnusedParameters": false,
     "noFallthroughCasesInSwitch": true
   },
-  "include": [".", "../stage 1 idea lab/idea-lab_-project-charter", "../stage 2 idea simulation"],
+  "include": [
+    "*.tsx",
+    "*.ts",
+    "../stage 1 idea lab/idea-lab_-project-charter/**/*.ts",
+    "../stage 1 idea lab/idea-lab_-project-charter/**/*.tsx",
+    "../stage 2 idea simulation/**/*.ts",
+    "../stage 2 idea simulation/**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules",
+    "vite.config.ts"
+  ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
