@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>完蛋！我被好想法包围了！</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet" crossorigin="anonymous">
+    <!-- ReactFlow Style -->
+    <link rel="stylesheet" href="https://esm.sh/reactflow@11.11.4/dist/style.css" crossorigin="anonymous">
+    <style>
+        :root {
+            --bg-gradient: linear-gradient(135deg, #E0F2FE 0%, #F3E8FF 50%, #FEFCE8 100%);
+            --primary: #6366f1;
+            --primary-soft: #818cf8;
+            --card-bg: rgba(255, 255, 255, 0.85);
+        }
+        body, html, #root {
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            background: var(--bg-gradient);
+            color: #1e293b;
+            font-family: 'Quicksand', 'Noto Sans SC', sans-serif;
+            overflow: hidden;
+        }
+        
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+
+        /* React Flow Overrides */
+        .react-flow__pane {
+            background: transparent;
+        }
+        .react-flow__controls {
+          box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+          border-radius: 1rem;
+          overflow: hidden;
+          border: 1px solid white !important;
+        }
+        .react-flow__controls button {
+          background-color: white;
+          border-bottom: 1px solid #f1f5f9;
+          color: #64748b;
+        }
+        .react-flow__controls button:hover {
+          background-color: #f8fafc;
+          color: #6366f1;
+        }
+        .react-flow__attribution {
+          display: none;
+        }
+
+        .soft-shadow {
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-5px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        @keyframes edge-flow {
+          from { stroke-dashoffset: 20; }
+          to { stroke-dashoffset: 0; }
+        }
+
+        .animate-edge-flow {
+          stroke-dasharray: 10, 5;
+          animation: edge-flow 1s linear infinite;
+        }
+
+        .sticker-hover:hover {
+            transform: scale(1.02) rotate(1deg);
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        /* Classes to hide during export */
+        .exporting .react-flow__controls,
+        .exporting .react-flow__attribution,
+        .exporting .lane-labels {
+            display: none !important;
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://esm.sh/@google/genai@^1.34.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react-dom": "https://esm.sh/react-dom@^19.2.3",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "reactflow": "https://esm.sh/reactflow@^11.11.4",
+    "zustand": "https://esm.sh/zustand@^5.0.9",
+    "html-to-image": "https://esm.sh/html-to-image@1.11.11",
+    "jspdf": "https://esm.sh/jspdf@2.5.1"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <div id="root"></div>
+    <script type="module" src="index.tsx"></script>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
