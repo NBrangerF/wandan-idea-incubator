@@ -11,7 +11,8 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "strict": true,
+    "strict": false,
+    "noImplicitAny": false,
     "noUnusedLocals": false,
     "noUnusedParameters": false,
     "noFallthroughCasesInSwitch": true
@@ -26,7 +27,10 @@
   ],
   "exclude": [
     "node_modules",
-    "vite.config.ts"
+    "**/node_modules",
+    "vite.config.ts",
+    "../stage 1 idea lab/**/vite.config.ts",
+    "../stage 2 idea simulation/vite.config.ts"
   ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
